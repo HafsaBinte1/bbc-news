@@ -8,14 +8,14 @@ const loadCategories = () => {
 const displayCategories = categories => {
     categories.forEach(categorie => {
         // console.log(categorie)
-        const navContainer = document.getElementById('nav-container');
-        const creatLi = document.createElement('li');
+        const categoriesContainer = document.getElementById('categories-container');
+        const li = document.createElement('li');
         creatLi.classList.add('nav-item');
-        creatLi.innerHTML = `
+        li.innerHTML = `
         <a onclick="loadNews(${categorie.category_id
             })" class="nav-link active pe-5" aria-current="page" href="#">${categorie.category_name}</a>
         `
-        navContainer.appendChild(creatLi);
+        categoriesContainer.appendChild(li);
     })
 }
 
@@ -67,7 +67,7 @@ const displayNews = newses => {
                 </div>
                 <div class="mt-4">
                     <button onclick="loadModal('${news._id}')" type="button" class="btn btn-white text-primary fs-4 fw-bold " data-bs-toggle="modal"        data-bs-target="#exampleModal">
-                    <iconify-icon icon="akar-icons:arrow-right"></iconify-icon>
+                    >>>
                     </button>
                 </div>
             </div>
