@@ -32,11 +32,7 @@ const displayNews = newses => {
     const foundContainer = document.getElementById('found-container');
     foundContainer.innerText = `${newses.length} Items Found`;
     if(newses.length === 0){
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'No News Found!',
-        })
+        alert('No News Found')
         toggleSpinner(false);
         newsContainer.innerHTML = '';
         return
@@ -61,10 +57,10 @@ const displayNews = newses => {
                     <img src="${news.author.img}" class="rounded-circle author-image mt-3" alt="..."><span class="ms-1 fs-5">${news.author.name}</span>
                 </div> 
                 <div class="mt-4">
-                    <i class="fa-regular fa-eye"></i><span>1.5 M</span>
+                <iconify-icon icon="akar-icons:eye"></iconify-icon><span>${news.total_view ? news.total_view : 'No views Today'}</span>
                 </div>
                 <div class="mt-4">
-                    <button onclick="${loadModal(news._id)}" type="button" class="btn btn-primary" data-bs-toggle="modal"        data-bs-target="#exampleModal">
+                    <button onclick="loadModal('${news._id}')" type="button" class="btn btn-primary" data-bs-toggle="modal"        data-bs-target="#exampleModal">
                      >>>
                     </button>
                 </div>
