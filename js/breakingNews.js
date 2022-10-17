@@ -13,7 +13,7 @@ const displayCategories = categories =>{
         const categoriesContainer = document.getElementById('categories-container');
         const li = document.createElement('li');
        li.classList.add('nav-item');
-        li.innerHTML =`<a onclick="loadNews(${categorie.category_id})" class="nav-link active pe-5" aria-current="page" href="#">${categorie.category_name}</a> 
+        li.innerHTML =`<a onclick="loadNews(${categorie.category_id})" class="nav-link active pe-5 fw-semibold" aria-current="page" href="#">${categorie.category_name}</a> 
         `;
         categoriesContainer.appendChild(li)
     })
@@ -27,6 +27,7 @@ const loadNews = id => {
     .then(data => displayNews(data.data))
 }
 const displayNews = newses => {
+    const dataSort = newses.sort((a,b) =>  b.total_view - a.total_view)
     const newsContainer = document.getElementById('news-container');
     newsContainer.textContent = '';
     const foundContainer = document.getElementById('found-container');
@@ -37,7 +38,7 @@ const displayNews = newses => {
         newsContainer.innerHTML = '';
         return
     }
-    newses.forEach(news => {
+    dataSort.forEach(news => {
         console.log(news);
 
         const creatDiv = document.createElement('div');
@@ -61,7 +62,8 @@ const displayNews = newses => {
                 </div>
                 <div class="mt-4">
                     <button onclick="loadModal('${news._id}')" type="button" class="btn btn-primary" data-bs-toggle="modal"        data-bs-target="#exampleModal">
-                     >>>
+                    <iconify-icon
+                    icon="ant-design:arrow-right-outlined"></iconify-icon>
                     </button>
                 </div>
             </div>
