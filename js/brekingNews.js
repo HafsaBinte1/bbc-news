@@ -3,6 +3,7 @@ const loadCategories = () =>{
     fetch(url)
     .then(res => res.json())
     .then(data => displayCategories(data.data.news_category))
+    .catch(error => console.log(error))
 }
 
 const displayCategories = categories =>{
