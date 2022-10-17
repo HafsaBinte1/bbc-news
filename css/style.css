@@ -1,0 +1,20 @@
+.found-box{
+    color: #fff;
+    border: 1px solid black;
+    height: 50px;
+    width: 100%;
+}
+.details{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.margin {
+    margin-bottom: 50px;
+}
+
+.author-image {
+    width: 20%;
+}
+
