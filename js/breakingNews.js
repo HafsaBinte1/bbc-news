@@ -109,4 +109,4 @@ loadNews(01);
 
 loadCategories();
 
-loadModal();
+
