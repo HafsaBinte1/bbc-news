@@ -108,5 +108,5 @@ const displayModal = news => {
 loadNews(01);
 
 loadCategories();
-
+loadModal();
 
