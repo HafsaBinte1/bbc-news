@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css
+    ">
+</head>
+
+<body class="container">
+    <header>
+        <h1 class="text-center mt-3">Some Question you must have to Know</h1>
+    </header>
+    <main>
+        <section class="mt-5">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h3>Difference between Var / Let / Const</h3>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h5>There are three keywords in JavaScript that can be used to declare variables: let, var,
+                                and const. Each keyword has different rules and implications for how the variables they
+                                create can be used. <br>
+
+                                <strong>LET:</strong> The let keyword declares a block-scoped local variable, optionally
+                                initializing it
+                                to a value.
+                                Block-scoped means that the variable is only available within the block it was declared
+                                in, which is usually denoted by curly braces {}. <br>
+
+                                <strong>VAR:</strong> The var keyword declares a function-scoped or global variable,
+                                optionally
+                                initializing it to a value.
+                                Function-scoped means that the variable is only available within the function it was
+                                declared in. Global variables are available throughout your entire code. <br>
+
+                                <strong>CONST:</strong> The const keyword declares a block-scoped, immutable constant
+                                variable, i.e. a
+                                variable that cant be reassigned.
+                                Constants are also called “immutable variables”, but thats a bit of a misnomer since
+                                they are actually variables just ones that cant be reassigned.
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <h3>Difference between Arrow Function and Regular Function</h3>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h5>Since regular functions are constructible, they can be called using the new keyword.
+                                However, the arrow functions are only callable and not constructible, i.e arrow
+                                functions can never be used as constructor functions. Hence, they can never be invoked
+                                with the new keyword.</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <h3>Why we Use Template String</h3>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h5>Template strings are a powerful feature of modern JavaScript released in ES6. It lets us
+                                insert/interpolate variables and expressions into strings without needing to concatenate
+                                like in older versions of JavaScript. It allows us to create strings that are complex
+                                and contain dynamic elements</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
+    "></script>
+</body>
+
+</html>

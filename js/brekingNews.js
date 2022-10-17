@@ -31,11 +31,11 @@ const displayNews = newses => {
     newsContainer.textContent = '';
     const foundContainer = document.getElementById('found-container');
     foundContainer.innerText = `${newses.length} Items Found`;
-    if (newses.length === 0) {
+    if(newses.length === 0){
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'No data Found!',
+            text: 'No News Found!',
         })
         toggleSpinner(false);
         newsContainer.innerHTML = '';
